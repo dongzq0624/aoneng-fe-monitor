@@ -1,0 +1,32 @@
+{
+  "name": "aoneng-fe-monitor-react",
+  "version": "1.0.0",
+  "description": "奥能电源--前端稳定性监控 React 监控",
+  "main": "dist/index.global.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "unpkg": "dist/index.global.js",
+  "scripts": {
+    "build": "encode-bundle src/index.ts --format iife,cjs,esm --dts --minify --global-name aonengFeMonitor",
+    "clean": "rimraf dist node_modules"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "keywords": [
+    "aoneng",
+    "monitor",
+    "react"
+  ],
+  "author": "dongzq",
+  "license": "ISC",
+  "devDependencies": {
+    "encode-bundle": "^1.4.1"
+  },
+  "dependencies": {
+    "aoneng-fe-monitor-core": "workspace:^",
+    "aoneng-fe-monitor-shared": "workspace:^",
+    "aoneng-fe-monitor-types": "workspace:^"
+  }
+}
